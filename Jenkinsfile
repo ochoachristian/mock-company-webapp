@@ -8,7 +8,7 @@ pipeline {
     stage('Build') {
         steps {
                 sh './gradlew assemble'
-                sh 'npm install -g yarn'
+                sh 'npm install yarn'
                 sh 'yarn install'
             }
         }
