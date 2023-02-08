@@ -8,6 +8,8 @@ pipeline {
     stage('Build') {
         steps {
                 sh './gradlew assemble'
+                sh 'npm install -g yarn'
+                sh 'yarn install'
             }
         }
     stage('Test') {
